@@ -1,0 +1,40 @@
+﻿@using OfferManagement.Models
+@model LoginViewModel
+@{
+    ViewBag.Title = "Log in with Google";
+}
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@System.Configuration.ConfigurationManager.AppSettings["ApplicationName"] - @ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="container">
+        
+        <div class="row">
+            <div class="col-md-12 col-xs-12 col-sm-12 text-center">
+                <h2>@ViewBag.Title</h2>
+            </div>
+        </div>
+        <div class="row">
+
+            <section id="socialLoginForm">
+                @Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })
+            </section>
+        </div>
+    </div>
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+</body>
+</html>

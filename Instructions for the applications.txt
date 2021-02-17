@@ -1,0 +1,10 @@
+DB:Mongo
+DbName : HBS
+CollectionName:RoomManagement
+
+DB:SQL
+"AuthConnection": "server=ServerName; database=IdentityDb_Angular; Integrated security=true" 
+Please provide the server name, DB will automativally created.
+
+For User Register :
+Use 7+ characters for password as the min length is set as 7.

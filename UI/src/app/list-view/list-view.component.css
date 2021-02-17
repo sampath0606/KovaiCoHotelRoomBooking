@@ -1,0 +1,36 @@
+.table-container {
+  width: 75%;
+  /* background-color: rgb(202, 207, 207) */
+}
+
+table {
+  width: 50%;
+  margin-bottom: 1em;
+  
+}
+
+.badge-Single {
+  background-color: #bbeb4a; 
+  /* border: 4px solid #ff0000; */
+  color: #ffffff;
+  text-align: center;
+}
+.badge-Double {
+  background-color: #1db5ec; 
+  /* border: 4px solid #ff0000; */
+  color: #ffffff;
+  text-align: center;
+}
+
+.badge-Available {
+  background-color: #7af88d; 
+  /* border: 4px solid #ff0000; */
+  color: #ffffff;
+  text-align: center;
+}
+.badge-Booked {
+  background-color: rgb(241, 70, 85); 
+  /* border: 4px solid #ff0000; */
+  color: #ffffff;
+  text-align: center;
+}

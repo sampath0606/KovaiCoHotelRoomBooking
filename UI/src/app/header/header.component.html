@@ -1,0 +1,12 @@
+<mat-toolbar class="mat-toolbar">Hotel Management
+	<div *ngIf="isUserPresent()" class="keep-c-toggle-view">
+		<button *ngIf="isAddView" (click)="switchToListView()" class="btn btn-info"> View Rooms  </button>
+		<button *ngIf="!isAddView" (click)="switchToNoteView()" class="btn btn-info"> Add Room </button>
+		
+	</div>
+	<div *ngIf="isUserPresent()" >
+		<button (click)="logout()" class="btn btn-warning"> LogOut </button>
+	</div>
+	
+	
+</mat-toolbar>

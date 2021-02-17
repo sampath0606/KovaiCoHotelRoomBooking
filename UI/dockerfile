@@ -1,0 +1,6 @@
+FROM stefanscherer/node-windows
+WORKDIR /usr/src/keepnoteapp
+COPY package.json ./
+RUN npm install
+COPY . /usr/src/keepnoteapp
+CMD npm start 

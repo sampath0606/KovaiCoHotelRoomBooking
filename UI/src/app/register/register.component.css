@@ -1,0 +1,23 @@
+.login-form {
+    border: 1px solid #ccc;
+    margin: 20px auto;
+    padding: 20px;
+    width: 40vw;
+  }
+  .login-field {
+    width: 100%;
+  }
+  .login-btn {
+    text-align: center;
+    padding-bottom: 10px;
+  }
+  .login-error {
+    text-align: center;
+  }
+
+  .register-header
+  {
+    text-align: center;
+    font-size: x-large;
+    color: brown;
+  }

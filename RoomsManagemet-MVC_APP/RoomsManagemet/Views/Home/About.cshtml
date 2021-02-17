@@ -1,0 +1,98 @@
+﻿@{
+    ViewBag.Title = @System.Configuration.ConfigurationManager.AppSettings["ReportPageName"];
+}
+<div class="text-center"><h2>@ViewBag.Title</h2></div>
+
+<script>
+    $(document).ready(function () {
+
+        getBookings();
+    });
+
+    function getBookings() {
+        var username = "@HttpContext.Current.User.Identity.Name.ToUpper()";
+        $.ajax({
+            url: "https://localhost:44387/api/RoomBooking/GetRoomsByBookedName/" + username,
+            type: "GET",
+            success: function (response) {
+               OnSuccess(response)
+            },
+            failure: function (response) {
+                alert(response);
+            },
+            error: function (response) {
+                alert(response);
+            }
+        })
+    }
+
+
+
+    function DeleteRoomBooking(RoomNo, from, to) {
+        alert(RoomNo + from + to);
+        var username = "@HttpContext.Current.User.Identity.Name.ToUpper().Trim()";
+
+        $.ajax({
+            url: "https://localhost:44387/api/RoomBooking/DeleteBooking/" + RoomNo + " / " + from + " / " + to + " / " + username ,
+            type: "DELETE",
+            success: function (response) {
+                getBookings();
+                alert("Room Booking Canceled");
+                
+            },
+            failure: function (response) {
+                alert(response);
+            },
+            error: function (response) {
+                alert(response);
+            }
+        })
+    }
+
+    function OnSuccess(response) {
+        $("#booking").DataTable(
+            {
+                data: response,
+                destroy: true,
+                columns:
+                [{ "data": "RoomNo", "name": "RoomNo", "autoWidth": true },
+                { "data": "Type", "name": "Type", "autoWidth": true },
+                { "data": "FromDate", "name": "FromDate", "autoWidth": true },
+                { "data": "ToDate", "name": "ToDate", "autoWidth": true },
+                {
+                    render: function (data, type, row) {
+                        if (row.canDeleteBooking) {
+                            return "<a href='#' class='btn btn-danger' onclick=DeleteRoomBooking('" + row.RoomNo + "','" + row.FromDate + "','" + row.ToDate + "'); >Delete Booking</a>";
+                        }
+                        else {
+                            return "<a href='#' class='btn btn-warning' disabled >Delete Booking</a>";
+                        }
+                    }
+                }
+
+                    ]
+            });
+    };
+
+
+</script>
+
+
+
+<div class="container">
+    <br />
+    <div style="width:90%; margin:0 auto;">
+        <table id="booking" class="table table-striped table-bordered dt-responsive nowrap" width="100%" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>RoomNo</th>
+                    <th>Type</th>
+                    <th>FromDate</th>
+                    <th>ToDate</th>
+                    <th>Cancel</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+</div>
+

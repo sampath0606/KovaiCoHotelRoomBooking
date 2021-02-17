@@ -1,0 +1,37 @@
+<!-- Label to display any error messages -->
+<label class="error-message">{{ errMessage }}</label>
+
+<!-- Expansion panel to add new notes -->
+<div class="notes-container">
+  <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title class="note-paneltitle">
+          Add a Room
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+    
+      <mat-form-field class="note-title">
+        <input matInput placeholder="RoomNo" class="roomnoCapitalize" name='RoomNo' [(ngModel)]='room.RoomNo'/>
+      </mat-form-field>
+      <mat-form-field class="note-title">
+        <input matInput  pattern="^[0-9]{1,6}(\.[0-9]{0,2})?$" placeholder="Cost- Only Number" name='Cost' [(ngModel)]='room.Cost'/>
+      </mat-form-field>
+      <mat-form-field class="note-text">
+        <textarea matInput pattern="^\d{1,2}$" placeholder='Occupancy' name='Occupancy' [(ngModel)]='room.Occupancy'></textarea>
+      </mat-form-field>
+     <mat-form-field>
+        <mat-label>Room Type</mat-label>
+        <mat-select [(ngModel)]="room.Type">
+          <mat-option *ngFor="let item of roomTypes" [value]="item.name">
+            {{item.name}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <div class='takenotes-btn'>
+        <button (click) = 'addlogs()' class="btn btn-info" >Add Room</button>
+      </div>
+
+     </mat-expansion-panel>
+    <mat-error *ngIf="errorMessage"><label class="error-message">{{errorMessage}}</label></mat-error>
+</div>

@@ -1,0 +1,45 @@
+D:\Kovai\ChangeLogAPI\ChangeLogAPI\bin\Debug\netcoreapp2.1\ChangeLogAPI.deps.json
+D:\Kovai\ChangeLogAPI\ChangeLogAPI\bin\Debug\netcoreapp2.1\ChangeLogAPI.runtimeconfig.json
+D:\Kovai\ChangeLogAPI\ChangeLogAPI\bin\Debug\netcoreapp2.1\ChangeLogAPI.runtimeconfig.dev.json
+D:\Kovai\ChangeLogAPI\ChangeLogAPI\bin\Debug\netcoreapp2.1\ChangeLogAPI.dll
+D:\Kovai\ChangeLogAPI\ChangeLogAPI\bin\Debug\netcoreapp2.1\ChangeLogAPI.pdb
+D:\Kovai\ChangeLogAPI\ChangeLogAPI\bin\Debug\netcoreapp2.1\ChangeLogAPI.xml
+D:\Kovai\ChangeLogAPI\ChangeLogAPI\obj\Debug\netcoreapp2.1\ChangeLogAPI.csproj.CoreCompileInputs.cache
+D:\Kovai\ChangeLogAPI\ChangeLogAPI\obj\Debug\netcoreapp2.1\ChangeLogAPI.RazorAssemblyInfo.cache
+D:\Kovai\ChangeLogAPI\ChangeLogAPI\obj\Debug\netcoreapp2.1\ChangeLogAPI.RazorAssemblyInfo.cs
+D:\Kovai\ChangeLogAPI\ChangeLogAPI\obj\Debug\netcoreapp2.1\ChangeLogAPI.AssemblyInfoInputs.cache
+D:\Kovai\ChangeLogAPI\ChangeLogAPI\obj\Debug\netcoreapp2.1\ChangeLogAPI.AssemblyInfo.cs
+D:\Kovai\ChangeLogAPI\ChangeLogAPI\obj\Debug\netcoreapp2.1\ChangeLogAPI.RazorTargetAssemblyInfo.cache
+D:\Kovai\ChangeLogAPI\ChangeLogAPI\obj\Debug\netcoreapp2.1\ChangeLogAPI.dll
+D:\Kovai\ChangeLogAPI\ChangeLogAPI\obj\Debug\netcoreapp2.1\ChangeLogAPI.pdb
+D:\Kovai\ChangeLogAPI\ChangeLogAPI\obj\Debug\netcoreapp2.1\ChangeLogAPI.csprojAssemblyReference.cache
+D:\ChangeLogSystem\ChangeLogAPI\ChangeLogAPI\bin\Debug\netcoreapp2.1\ChangeLogAPI.deps.json
+D:\ChangeLogSystem\ChangeLogAPI\ChangeLogAPI\bin\Debug\netcoreapp2.1\ChangeLogAPI.runtimeconfig.json
+D:\ChangeLogSystem\ChangeLogAPI\ChangeLogAPI\bin\Debug\netcoreapp2.1\ChangeLogAPI.runtimeconfig.dev.json
+D:\ChangeLogSystem\ChangeLogAPI\ChangeLogAPI\bin\Debug\netcoreapp2.1\ChangeLogAPI.dll
+D:\ChangeLogSystem\ChangeLogAPI\ChangeLogAPI\bin\Debug\netcoreapp2.1\ChangeLogAPI.pdb
+D:\ChangeLogSystem\ChangeLogAPI\ChangeLogAPI\bin\Debug\netcoreapp2.1\ChangeLogAPI.xml
+D:\ChangeLogSystem\ChangeLogAPI\ChangeLogAPI\obj\Debug\netcoreapp2.1\ChangeLogAPI.csproj.CoreCompileInputs.cache
+D:\ChangeLogSystem\ChangeLogAPI\ChangeLogAPI\obj\Debug\netcoreapp2.1\ChangeLogAPI.RazorAssemblyInfo.cache
+D:\ChangeLogSystem\ChangeLogAPI\ChangeLogAPI\obj\Debug\netcoreapp2.1\ChangeLogAPI.RazorAssemblyInfo.cs
+D:\ChangeLogSystem\ChangeLogAPI\ChangeLogAPI\obj\Debug\netcoreapp2.1\ChangeLogAPI.AssemblyInfoInputs.cache
+D:\ChangeLogSystem\ChangeLogAPI\ChangeLogAPI\obj\Debug\netcoreapp2.1\ChangeLogAPI.AssemblyInfo.cs
+D:\ChangeLogSystem\ChangeLogAPI\ChangeLogAPI\obj\Debug\netcoreapp2.1\ChangeLogAPI.RazorTargetAssemblyInfo.cache
+D:\ChangeLogSystem\ChangeLogAPI\ChangeLogAPI\obj\Debug\netcoreapp2.1\ChangeLogAPI.dll
+D:\ChangeLogSystem\ChangeLogAPI\ChangeLogAPI\obj\Debug\netcoreapp2.1\ChangeLogAPI.pdb
+D:\ChangeLogSystem\ChangeLogAPI\ChangeLogAPI\obj\Debug\netcoreapp2.1\ChangeLogAPI.csprojAssemblyReference.cache
+D:\Sampath FSD\ChangeLogSystem\ChangeLogAPI\ChangeLogAPI\bin\Debug\netcoreapp2.1\ChangeLogAPI.deps.json
+D:\Sampath FSD\ChangeLogSystem\ChangeLogAPI\ChangeLogAPI\bin\Debug\netcoreapp2.1\ChangeLogAPI.runtimeconfig.json
+D:\Sampath FSD\ChangeLogSystem\ChangeLogAPI\ChangeLogAPI\bin\Debug\netcoreapp2.1\ChangeLogAPI.runtimeconfig.dev.json
+D:\Sampath FSD\ChangeLogSystem\ChangeLogAPI\ChangeLogAPI\bin\Debug\netcoreapp2.1\ChangeLogAPI.dll
+D:\Sampath FSD\ChangeLogSystem\ChangeLogAPI\ChangeLogAPI\bin\Debug\netcoreapp2.1\ChangeLogAPI.pdb
+D:\Sampath FSD\ChangeLogSystem\ChangeLogAPI\ChangeLogAPI\bin\Debug\netcoreapp2.1\ChangeLogAPI.xml
+D:\Sampath FSD\ChangeLogSystem\ChangeLogAPI\ChangeLogAPI\obj\Debug\netcoreapp2.1\ChangeLogAPI.csprojAssemblyReference.cache
+D:\Sampath FSD\ChangeLogSystem\ChangeLogAPI\ChangeLogAPI\obj\Debug\netcoreapp2.1\ChangeLogAPI.csproj.CoreCompileInputs.cache
+D:\Sampath FSD\ChangeLogSystem\ChangeLogAPI\ChangeLogAPI\obj\Debug\netcoreapp2.1\ChangeLogAPI.RazorAssemblyInfo.cache
+D:\Sampath FSD\ChangeLogSystem\ChangeLogAPI\ChangeLogAPI\obj\Debug\netcoreapp2.1\ChangeLogAPI.RazorAssemblyInfo.cs
+D:\Sampath FSD\ChangeLogSystem\ChangeLogAPI\ChangeLogAPI\obj\Debug\netcoreapp2.1\ChangeLogAPI.AssemblyInfoInputs.cache
+D:\Sampath FSD\ChangeLogSystem\ChangeLogAPI\ChangeLogAPI\obj\Debug\netcoreapp2.1\ChangeLogAPI.AssemblyInfo.cs
+D:\Sampath FSD\ChangeLogSystem\ChangeLogAPI\ChangeLogAPI\obj\Debug\netcoreapp2.1\ChangeLogAPI.RazorTargetAssemblyInfo.cache
+D:\Sampath FSD\ChangeLogSystem\ChangeLogAPI\ChangeLogAPI\obj\Debug\netcoreapp2.1\ChangeLogAPI.dll
+D:\Sampath FSD\ChangeLogSystem\ChangeLogAPI\ChangeLogAPI\obj\Debug\netcoreapp2.1\ChangeLogAPI.pdb

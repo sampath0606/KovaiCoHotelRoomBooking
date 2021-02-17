@@ -1,0 +1,28 @@
+<!-- to display the error message -->
+<label class="error-message"><span *ngIf="errorMessage">{{ errorMessage }}</span></label>
+<!-- Login form -->
+<div class="login-form">
+    <div class="register-header">Register Here</div>
+<mat-form-field class="login-field">
+  <label>Username </label>
+  <input type="text" matInput name="username" class="username" [formControl]="username" required/>
+  <mat-error *ngIf="username.invalid">{{getUserNameErrorMessage()}}</mat-error>
+</mat-form-field>
+<mat-form-field class="login-field">
+  <label>Password</label>
+  <input type="password" matInput name="password" class="password" [formControl]="password" minlength="7" required/>
+  <mat-error *ngIf="password.invalid">{{getPasswordErrorMessage()}}</mat-error>
+</mat-form-field>
+<div class="login-btn">
+  <mat-error *ngIf="showRegister">{{getUserNotFoundError()}}</mat-error>
+  <button mat-raised-button (click)="registerUser()" color='primary'>Register</button>
+  <button mat-raised-button (click)="clear()">Clear</button>
+  
+</div>
+<div class="login-btn">
+  Already a User ?
+  <button mat-raised-button (click)="loginpage()">
+    <mat-icon>home</mat-icon>
+</button>
+</div>
+</div>

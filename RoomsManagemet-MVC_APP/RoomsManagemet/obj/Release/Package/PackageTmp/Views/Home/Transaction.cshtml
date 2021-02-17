@@ -1,0 +1,113 @@
+﻿@model OfferManagement.Models.DiscountTransaction
+
+@{
+    ViewBag.Title = @System.Configuration.ConfigurationManager.AppSettings["TransactionsPageName"] + " - Details";
+}
+
+<h2>@ViewBag.Title.</h2>
+
+<div>
+    <hr />
+    <h3 class="text-success">@ViewBag.Message</h3>
+    <br />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CustomerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustomerName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CustomerEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustomerEmail)
+        </dd>
+
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MobileNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MobileNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PCCName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PCCName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BillValue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BillValue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Discount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Discount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BilledValue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BilledValue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OTP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OTP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DiscountReason)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiscountReason)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MessageTemplate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MessageTemplate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BilledDateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BilledDateTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserEmail)
+        </dd>
+
+    </dl>
+</div>

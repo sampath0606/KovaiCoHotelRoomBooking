@@ -1,0 +1,45 @@
+.login-form {
+  border: 1px solid #ccc;
+  margin: 20px auto;
+  padding: 20px;
+  width: 40vw;
+}
+.login-field {
+  width: 100%;
+}
+.login-btn {
+  text-align: center;
+  padding-bottom: 10px;
+ 
+}
+.login-error {
+  text-align: center;
+}
+.login-title{
+  text-align: center;
+  font-size: x-large;
+  font-weight: bolder;
+  font-size: large;
+  color: rgb(234, 13, 241);
+}
+.error-message {
+  display: block;
+  margin: 15px;
+  color:black;
+}
+.error-message span {
+  background-color: #f8d7da;
+  border: 1px solid #721c24;
+  color: #721c24;
+  display: block;
+  padding: 15px 10px;
+}
+
+.usrerror{
+  font-size: medium;
+  color: #721c24;
+}
+
+.btn{
+	background-color: #007c89;
+}

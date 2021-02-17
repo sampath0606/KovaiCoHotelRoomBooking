@@ -1,0 +1,32 @@
+.notes-container {
+  width: 30vw;
+  margin: auto;
+}
+.note-title, .note-text {
+  width: 100%;
+}
+.error-message {
+  display: block;
+  margin: 15px;
+  color: red;
+  font-weight: bold;
+}
+.error-message span {
+  background-color: #f8d7da;
+  border: 1px solid #721c24;
+  color: #721c24;
+  display: block;
+  padding: 15px 10px;
+}
+.example-chip-list {
+  width: 100%;
+}
+
+.note-paneltitle{
+  font-size: large;
+}
+
+.roomnoCapitalize {
+  text-transform: uppercase;
+}
+

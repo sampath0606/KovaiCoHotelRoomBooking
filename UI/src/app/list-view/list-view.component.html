@@ -1,0 +1,71 @@
+<div class="row">
+  <div class="offset-md-1 col-md-2">
+    <mat-form-field>
+      <input matInput [matDatepicker]="fromDate" [min]="minDate" [max]="maxDate" 
+      placeholder="From date"  [(ngModel)]="bookedDates.fromDate" >
+      <mat-datepicker-toggle  matSuffix [for]="fromDate"></mat-datepicker-toggle>
+      <mat-datepicker #fromDate></mat-datepicker>
+    </mat-form-field>
+    
+  </div>
+  
+  <div class="col-md-2">
+    <mat-form-field>
+      <input matInput [matDatepicker]="toDate" [min]="minDate" [max]="maxDate" placeholder="To date" 
+      [(ngModel)]="bookedDates.toDate" >
+      <mat-datepicker-toggle matSuffix [for]="toDate"></mat-datepicker-toggle>  
+      <mat-datepicker #toDate></mat-datepicker>
+    </mat-form-field>
+    
+  </div>
+  
+  <div class="col-md-2">
+    <button (click) = 'getRoomsAvailability()' class="btn btn-secondary" >Check Availability</button>
+  </div>
+  
+</div>
+
+<div class="table-container">
+    <mat-table #table [dataSource]="dataSource">
+      <ng-container matColumnDef="RoomNo">
+        <mat-header-cell *matHeaderCellDef >RoomNo</mat-header-cell>
+        <mat-cell *matCellDef="let room"> {{room.RoomNo | uppercase }} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="Type">
+        <mat-header-cell *matHeaderCellDef >Type</mat-header-cell>
+        <mat-cell *matCellDef="let room"> 
+            <span class="badge" [ngClass]="getbadgecolor(room.Type)"> {{room.Type}}</span>
+            {{room.Type}}
+        </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="Status">
+        <mat-header-cell *matHeaderCellDef >Status</mat-header-cell>
+        <mat-cell [ngClass]="getbadgecolorforstatus(room.Status)" *matCellDef="let room">
+          {{room.Status}} </mat-cell>
+    </ng-container>
+    <!-- <ng-container matColumnDef="Remove">
+        <mat-header-cell *matHeaderCellDef>
+          <button mat-icon-button matTooltip="Remove all">
+            <mat-icon>clear_all</mat-icon>
+          </button>
+        </mat-header-cell>
+        <mat-cell *matCellDef="let room; let i = index;">
+          <button mat-icon-button (click)="removeAt(i)" matTooltip="Remove this item">
+            <mat-icon>clear</mat-icon>
+          </button>
+        </mat-cell>
+      </ng-container> -->
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let rows; columns: displayedColumns;"></mat-row>
+    </mat-table>
+    
+    <mat-paginator [pageSizeOptions]="[10]" showFirstLastButtons></mat-paginator>
+</div>
+  
+  
+  
+  
+  
+  
+  
+  

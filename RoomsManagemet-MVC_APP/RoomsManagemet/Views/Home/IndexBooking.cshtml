@@ -1,0 +1,169 @@
+﻿@model OfferManagement.Models.Bookings
+
+@{
+    ViewBag.Title = "IndexBooking";
+}
+
+<script>
+
+    $(document).ready(function () {
+             //$("#fromDate").datepicker().datepicker("setDate", new Date());
+
+            $("#fromDate").datepicker({
+            dateFormat: 'yy-mm-dd',
+            changemonth: true,
+            changeyear: false,
+             maxDate: "+1m",
+            setDate: new Date(),
+            onSelect: function (selected) {
+                $("#toDate").datepicker("option", "minDate", selected)
+            }
+            });
+
+            $("#toDate").datepicker({
+            dateFormat: 'yy-mm-dd',
+            changemonth: true,
+            changeyear: false,
+            maxDate: "+1m",
+            setDate: new Date(),
+            onSelect: function (selected) {
+            $("#fromDate").datepicker("option", "maxDate", selected)
+            }
+        });
+
+       $(document).on("click", "#getBooking", function (e) {
+           getBookings();
+        });
+    })
+
+    function getBookings()
+    {
+        var from = $('#fromDate').datepicker({ dateFormat: 'yyyy-mm-dd' }).val();
+        var to = $('#toDate').datepicker({ dateFormat: 'yyyy-mm-dd' }).val();
+
+        $.ajax({
+            url: "https://localhost:44387/api/RoomBooking/CheckAvailability/" + from + "/" + to,
+            type: "GET",
+            success: function (response) {
+                OnSuccess(response)
+            },
+            failure: function (response) {
+                alert(response);
+            },
+            error: function (response) {
+                alert(response);
+            }
+        })
+    }
+
+
+    function BookRoom(RoomNo) {
+
+        var from = $('#fromDate').datepicker({ dateFormat: 'yyyy-mm-dd' }).val();
+        var to = $('#toDate').datepicker({ dateFormat: 'yyyy-mm-dd' }).val();
+        var username = "@HttpContext.Current.User.Identity.Name.ToUpper()";
+
+        $.ajax({
+            url: "https://localhost:44387/api/RoomBooking/ReserveRoom/" + RoomNo + " / " + from + " / " + to + " / " + username ,
+            type: "GET",
+            success: function (response) {
+                getBookings();
+                alert("Room Booked");
+            },
+            failure: function (response) {
+                alert(response);
+            },
+            error: function (response) {
+                alert(response);
+            }
+        })
+    }
+
+    function OnSuccess(response) {
+
+        var from = $('#fromDate').datepicker({ dateFormat: 'yyyy-mm-dd' }).val();
+        var to = $('#toDate').datepicker({ dateFormat: 'yyyy-mm-dd' }).val();
+        var username = "@HttpContext.Current.User.Identity.Name.ToUpper()";
+        $("#demoGrid").DataTable(
+            {
+                data: response,
+                destroy: true,
+                columns: [{ "data": "RoomNo", "name": "RoomNo", "autoWidth": true },
+                { "data": "Type", "name": "Type", "autoWidth": true },
+                { "data": "Cost", "name": "Cost", "autoWidth": true },
+                { "data": "Occupancy", "name": "Occupancy", "autoWidth": true },
+                {
+                    render: function (data, type, row) {
+                        return "<a href='#' class='btn btn-success' onclick=BookRoom('" + row.RoomNo + "'); >Book Room</a>";
+                    }
+                }
+
+
+
+                ]
+            });
+    };
+
+
+
+
+
+
+
+
+</script>
+
+@*<h2>IndexBooking</h2>*@
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        @*<h4>Bookings</h4>*@
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.FromDate, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FromDate, new { htmlAttributes = new { @class = "datepicker", @id = "fromDate" } })
+                @Html.ValidationMessageFor(model => model.FromDate, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ToDate, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ToDate, new { htmlAttributes = new { @class = "datepicker", @id = "toDate" } })
+                @Html.ValidationMessageFor(model => model.ToDate, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="button" id="getBooking" value="Check Availability" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div class="container">
+    <br />
+    <div style="width:90%; margin:0 auto;">
+        <table id="demoGrid" class="table table-striped table-bordered dt-responsive nowrap" width="100%" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>RoomNo</th>
+                    <th>Type</th>
+                    <th>Cost</th>
+                    <th>Occupancy</th>
+                    <th>BookRooms</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+</div>
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
