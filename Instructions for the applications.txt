@@ -1,6 +1,8 @@
 DB:Mongo
 DbName : HBS
 CollectionName:RoomManagement
+Mongo COllection json is attached, please import the file to the compass and then you will see the existing data in the app .
+
 
 DB:SQL
 "AuthConnection": "server=ServerName; database=IdentityDb_Angular; Integrated security=true" 
