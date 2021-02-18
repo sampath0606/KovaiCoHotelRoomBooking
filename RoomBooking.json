@@ -1,0 +1,1 @@
+{"_id":{"$oid":"60290ed5632b50097823dfad"},"RoomNo":"LX1","Number":{"$numberInt":"5"},"Type":"Double","Cost":{"$numberInt":"6000"},"Occupancy":{"$numberInt":"4"},"AddedBy":"Sampath6.sbkv","Reserved":[{"FromDate":{"$date":{"$numberLong":"1613606400000"}},"ToDate":{"$date":{"$numberLong":"1613606400000"}},"BookedBy":"SAMPATHRAJARAMAN"}]}
